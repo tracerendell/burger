@@ -1,0 +1,50 @@
+<h1 class="jumbotron">Burgers! Burgers! Burgers!</h1>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">What's on the Menu</div>
+                <div class="panel-body">
+                    <ul>
+                        {{#each burgers}} {{#unless devoured}} {{> burgers/burger-block devoured=true}} {{/unless}} {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        {{!-- <div class="col-md-2"></div> --}}
+
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">What's Already been Devoured!</div>
+                <div class="panel-body">
+                    <ul>
+                        {{#each burgers}} {{#if devoured}} {{> burgers/burger-block devoured=false}} {{/if}} {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Add a Burger</div>
+                <div class="panel-body">
+                    <form class="create-form">
+
+                        <span class="form-group">
+                            <label id="burger-name" for="nb">Burger Name:</label>
+                            <input type="text" id="nb" name="name">
+                        </span>
+
+                        <button type="submit">Add Burger!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

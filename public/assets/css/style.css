@@ -1,0 +1,23 @@
+/* body {
+    background: green;
+} */
+
+/* .btn-devour {
+    float: right;
+} */
+
+.panel-body {
+    font-size: 18px;
+}
+
+#burger-name {
+    font-size: 18px;
+}
+
+.jumbotron {
+    text-align: center;
+}
+
+.list-item {
+    padding-bottom: 5px;
+}
